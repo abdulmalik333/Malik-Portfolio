@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Abdul Malik R | Software Developer Portfolio</title>
+    
+    <!-- Tailwind CSS with Forms and Container Queries Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts: Hanken Grotesk, Inter, JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet"/>
+    
+    <!-- Material Symbols Outlined Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Tailwind Config Customizations (Corporate Edge Palette) -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#b8c4ff",
+                        "on-secondary-container": "#00217a",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "tertiary-container": "#001a42",
+                        "on-surface-variant": "#45464d",
+                        "on-primary-container": "#7c839b",
+                        "surface": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface": "#191c1e",
+                        "outline": "#76777d",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#001453",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-error": "#ffffff",
+                        "primary-container": "#131b2e",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#173bab",
+                        "on-tertiary-fixed": "#001a42",
+                        "secondary-fixed": "#dde1ff",
+                        "secondary-container": "#708cfd",
+                        "surface-tint": "#565e74",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "outline-variant": "#c6c6cd",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "secondary": "#3755c3",
+                        "background": "#f7f9fb",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#3980f4",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-primary": "#bec6e0",
+                        
+                        // Custom Dark Mode color tokens
+                        "dark-bg": "#0b0f19",
+                        "dark-surface": "#131b2e",
+                        "dark-surface-low": "#1e293b",
+                        "dark-surface-high": "#111827",
+                        "dark-text": "#f1f5f9",
+                        "dark-text-muted": "#94a3b8"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "stack-md": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "button-text": ["Inter", "sans-serif"],
+                        "display-lg": ["Hanken Grotesk", "sans-serif"],
+                        "display-lg-mobile": ["Hanken Grotesk", "sans-serif"],
+                        "headline-md": ["Hanken Grotesk", "sans-serif"],
+                        "headline-sm": ["Hanken Grotesk", "sans-serif"],
+                        "label-caps": ["JetBrains Mono", "monospace"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        /* Glassmorphism System Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #3755c3;
+            box-shadow: 0 12px 40px rgba(55, 85, 195, 0.08);
+            transform: translateY(-6px);
+        }
+        
+        /* Dark Mode Glassmorphism Override */
+        .dark .glass-card {
+            background: rgba(19, 27, 46, 0.7);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        .dark .glass-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+        }
+        
+        /* Floating Tech Icons Keyframe Animations */
+        @keyframes float-y-0 {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes float-y-1 {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-16px); }
+        }
+        @keyframes float-y-2 {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes float-y-3 {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+        }
+        .animate-float-0 { animation: float-y-0 5s ease-in-out infinite; }
+        .animate-float-1 { animation: float-y-1 6s ease-in-out infinite; }
+        .animate-float-2 { animation: float-y-2 4.5s ease-in-out infinite; }
+        .animate-float-3 { animation: float-y-3 5.5s ease-in-out infinite; }
+        
+        /* Typing cursor styling */
+        .typing-container::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Section entrance reveal animation */
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s cubic-bezier(0.21, 0.6, 0.35, 1);
+        }
+        .section-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Active nav indicator link styling */
+        .nav-link.active-tab {
+            color: #3755c3 !important;
+            font-weight: 600;
+        }
+        .dark .nav-link.active-tab {
+            color: #3b82f6 !important;
+        }
+    </style>
+</head>
+<body class="bg-background dark:bg-dark-bg text-on-surface dark:text-dark-text font-body-md overflow-x-hidden transition-colors duration-300 selection:bg-secondary/20">
+
+    <!-- Top Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-dark-bg/80 backdrop-blur-xl border-b border-outline/10 dark:border-white/5 shadow-sm transition-all duration-300 py-5">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-1 max-w-container-max mx-auto">
+            <div class="font-headline-sm text-headline-sm font-extrabold text-primary dark:text-white tracking-tighter cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                Abdul Malik R
+            </div>
+            
+            <!-- Desktop Nav Menu -->
+            <div class="hidden md:flex gap-10 items-center">
+                <a class="nav-link text-secondary dark:text-secondary-fixed-dim font-semibold font-body-md text-body-md transition-colors" href="#home">Home</a>
+                <a class="nav-link text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium text-body-md" href="#about">About</a>
+                <a class="nav-link text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium text-body-md" href="#services">Services</a>
+                <a class="nav-link text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium text-body-md" href="#experience">Experience</a>
+                <a class="nav-link text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium text-body-md" href="#skills">Skills</a>
+                <a class="nav-link text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium text-body-md" href="#projects">Projects</a>
+                <a class="nav-link text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium text-body-md" href="#contact">Contact</a>
+            </div>
+            
+            <!-- Theme Toggle & CTA Button -->
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2.5 bg-surface-container-low dark:bg-dark-surface hover:bg-surface-container dark:hover:bg-dark-surface-low text-on-surface-variant dark:text-dark-text-muted rounded-full transition-all border border-outline/5 dark:border-white/5" aria-label="Toggle Light/Dark Theme">
+                    <span class="material-symbols-outlined select-none text-[20px]" id="theme-toggle-icon">dark_mode</span>
+                </button>
+                <a href="#contact" class="hidden sm:inline-block bg-primary dark:bg-blue-600 text-on-primary dark:text-white px-6 py-2.5 rounded-full font-button-text text-button-text hover:bg-secondary dark:hover:bg-blue-500 shadow-md transition-all active:scale-95">
+                    Let's Talk
+                </a>
+                
+                <!-- Mobile Navigation Toggle -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-on-surface dark:text-white" aria-label="Open Navigation Menu">
+                    <span class="material-symbols-outlined text-[28px] select-none" id="menu-icon">menu</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-dropdown" class="hidden md:hidden absolute top-[100%] left-0 w-full bg-surface/95 dark:bg-dark-bg/95 backdrop-blur-2xl border-b border-outline/10 dark:border-white/5 shadow-lg flex flex-col py-6 px-margin-mobile gap-4">
+            <a class="nav-link text-left text-lg font-semibold py-2 text-secondary dark:text-blue-400" href="#home">Home</a>
+            <a class="nav-link text-left text-lg font-medium py-2 text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400" href="#about">About</a>
+            <a class="nav-link text-left text-lg font-medium py-2 text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400" href="#services">Services</a>
+            <a class="nav-link text-left text-lg font-medium py-2 text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400" href="#experience">Experience</a>
+            <a class="nav-link text-left text-lg font-medium py-2 text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400" href="#skills">Skills</a>
+            <a class="nav-link text-left text-lg font-medium py-2 text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400" href="#projects">Projects</a>
+            <a class="nav-link text-left text-lg font-medium py-2 text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400" href="#contact">Contact</a>
+            <hr class="border-outline/10 dark:border-white/5 my-2">
+            <a href="#contact" class="text-center bg-primary dark:bg-blue-600 text-on-primary dark:text-white py-3 rounded-full font-button-text text-button-text shadow-md hover:bg-secondary">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <main class="w-full">
+
+        <!-- 1. Hero Section -->
+        <section id="home" class="relative min-h-screen pt-32 pb-20 px-margin-mobile md:px-margin-desktop overflow-hidden flex items-center bg-surface-bright dark:bg-dark-bg/40">
+            <!-- Animated Background Glows -->
+            <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-secondary/5 dark:bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/5 dark:bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+            
+            <div class="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-left z-10">
+                    <div class="inline-flex items-center gap-2 px-4.5 py-2 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-full font-label-caps text-label-caps uppercase tracking-wider">
+                        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
+                        Available for Opportunities
+                    </div>
+                    <div class="space-y-3">
+                        <span class="font-headline-md text-headline-md text-secondary dark:text-blue-400 block font-semibold">Hello, I'm</span>
+                        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-white leading-[1.1] tracking-tight font-extrabold">
+                            Abdul Malik R
+                        </h1>
+                        <div class="h-10 md:h-12 flex items-center">
+                            <span class="font-headline-md text-2xl md:text-[32px] text-on-surface-variant dark:text-dark-text-muted typing-container" id="typing-target"></span>
+                        </div>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant dark:text-dark-text-muted max-w-xl leading-relaxed">
+                        Passionate Computer Science and Engineering student with expertise in Java, C, JavaScript, Full-Stack Development, and Artificial Intelligence. Dedicated to building innovative software solutions that solve real-world problems.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="assets/Abdul_Malik_Resume.pdf" download class="flex items-center justify-center gap-2.5 bg-primary dark:bg-blue-600 text-on-primary dark:text-white px-7 py-4 rounded-xl font-button-text text-body-md shadow-lg shadow-primary/10 dark:shadow-blue-900/20 hover:shadow-primary/25 hover:opacity-95 dark:hover:bg-blue-500 transition-all transform hover:-translate-y-1 active:scale-[0.98]">
+                            <span class="material-symbols-outlined text-[20px]">download</span>
+                            Download Resume
+                        </a>
+                        <a href="#projects" class="flex items-center justify-center gap-2.5 glass-card dark:text-white px-7 py-4 rounded-xl font-button-text text-body-md text-primary font-semibold group active:scale-[0.98]">
+                            View Projects
+                            <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1.5 transition-transform">arrow_forward</span>
+                        </a>
+                        <a href="#contact" class="flex items-center justify-center px-6 py-4 rounded-xl font-button-text text-body-md text-on-surface-variant dark:text-dark-text-muted hover:text-primary dark:hover:text-white font-medium transition-colors">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Visual (Avatar with floating tech badges) -->
+                <div class="lg:col-span-5 relative flex justify-center items-center mt-12 lg:mt-0 z-10">
+                    <div class="relative w-full max-w-[380px] aspect-square">
+                        <!-- Profile Card Container -->
+                        <div class="relative z-10 w-full h-full glass-card rounded-[2rem] overflow-hidden p-4">
+                            <img alt="Abdul Malik R" class="w-full h-full object-cover rounded-[1.5rem]" src="assets/profile.jpg"/>
+                        </div>
+                        
+                        <!-- Floating Tech Badges -->
+                        <div class="absolute -top-4 -left-6 px-4 py-3.5 glass-card rounded-2xl flex items-center justify-center gap-2 shadow-xl animate-float-0 select-none">
+                            <span class="text-xl">☕</span>
+                            <span class="text-xs font-bold font-label-caps text-on-surface dark:text-white">JAVA</span>
+                        </div>
+                        <div class="absolute top-1/4 -right-8 px-4.5 py-3.5 glass-card rounded-2xl flex items-center justify-center gap-2 shadow-xl animate-float-1 select-none">
+                            <span class="text-cyan-500 text-xl font-extrabold">⚛️</span>
+                            <span class="text-xs font-bold font-label-caps text-on-surface dark:text-white">React</span>
+                        </div>
+                        <div class="absolute bottom-1/4 -left-10 px-4 py-3.5 glass-card rounded-2xl flex items-center justify-center gap-2 shadow-xl animate-float-2 select-none">
+                            <span class="text-emerald-500 text-xl font-bold">🟢</span>
+                            <span class="text-xs font-bold font-label-caps text-on-surface dark:text-white">Node</span>
+                        </div>
+                        <div class="absolute -bottom-4 right-8 px-4.5 py-3.5 glass-card rounded-2xl flex items-center justify-center gap-2 shadow-xl animate-float-3 select-none">
+                            <span class="text-amber-400 text-xl">⚡</span>
+                            <span class="text-xs font-bold font-label-caps text-on-surface dark:text-white">JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/30 border-y border-outline/5 dark:border-white/5 section-reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <!-- Left Photo Graphic -->
+                    <div class="relative">
+                        <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden aspect-[4/5] md:aspect-square">
+                            <img alt="Sleek Minimal Workspace" class="w-full h-full object-cover rounded-[2rem]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3FYkM8ZNDKYcfx1wpPo1K4Mt1rAN1QeZwnvB_QgH_IzDVrGl12sU3xsOhTc1z2wxhY7UImBHtis920a8srmCtD9GLuEA6nl_gXIws5ZTnkN6LrZBnbYC_iaZrmoi0GonIkiVOlv-ZbjjjeJcXUjOS9kQDu0mKbYyoLAmheq07nUBfJ4MI2K9L5KS9h4quhT-9aFOnoq17m55mi7PTcNfuJE3-46TEZn7AZ_6sVet0GRqrk14NXhXIfA-InTQE9ydr6iqwAsAubg"/>
+                        </div>
+                        
+                        <!-- Metric Floating Card Overlay -->
+                        <div class="absolute bottom-8 right-8 glass-card p-6 rounded-2xl border-2 border-secondary/20 dark:border-blue-500/20 shadow-xl">
+                            <span class="block font-display-lg text-[36px] font-extrabold text-secondary dark:text-blue-400 leading-none">350+</span>
+                            <span class="text-on-surface-variant dark:text-dark-text-muted font-label-caps text-[10px] uppercase tracking-widest font-bold mt-1 block">Problems Solved</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Bio & Stats -->
+                    <div class="space-y-8">
+                        <div class="space-y-3">
+                            <span class="font-label-caps text-label-caps text-secondary dark:text-blue-400 uppercase tracking-widest font-bold">Biography</span>
+                            <h2 class="font-headline-md text-headline-md text-primary dark:text-white font-extrabold">About Me</h2>
+                            <div class="w-16 h-1 bg-secondary/20 dark:bg-blue-500/20 rounded-full"></div>
+                        </div>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant dark:text-dark-text-muted leading-relaxed">
+                            Hi, I'm Abdul Malik R, a Computer Science and Engineering student passionate about software development and technology. My journey started with a fascination for how systems interface, leading me to master diverse paradigms from low-level algorithms in C to scalable enterprise APIs in Spring Boot and robust web apps in the React/Node ecosystem. I thrive at the intersection of logical backend engineering and sleek frontend design.
+                        </p>
+                        
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 gap-4 pt-2">
+                            <div class="glass-card p-5 rounded-2xl text-center">
+                                <span class="block font-headline-md text-[28px] font-bold text-primary dark:text-white">1</span>
+                                <span class="text-on-surface-variant dark:text-dark-text-muted text-xs font-semibold">Internship</span>
+                            </div>
+                            <div class="glass-card p-5 rounded-2xl text-center">
+                                <span class="block font-headline-md text-[28px] font-bold text-primary dark:text-white">5+</span>
+                                <span class="text-on-surface-variant dark:text-dark-text-muted text-xs font-semibold">Major Projects</span>
+                            </div>
+                            <div class="glass-card p-5 rounded-2xl text-center">
+                                <span class="block font-headline-md text-[28px] font-bold text-primary dark:text-white">4</span>
+                                <span class="text-on-surface-variant dark:text-dark-text-muted text-xs font-semibold">Certifications</span>
+                            </div>
+                            <div class="glass-card p-5 rounded-2xl text-center">
+                                <span class="block font-headline-md text-[28px] font-bold text-primary dark:text-white">10+</span>
+                                <span class="text-on-surface-variant dark:text-dark-text-muted text-xs font-semibold">Technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Education & Certifications -->
+        <section id="education" class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-bright dark:bg-dark-bg/20 section-reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-16 space-y-3">
+                    <span class="font-label-caps text-label-caps text-secondary dark:text-blue-400 uppercase tracking-widest font-bold">Academic & Professional</span>
+                    <h2 class="font-headline-md text-headline-md text-primary dark:text-white font-extrabold">Education & Certifications</h2>
+                    <div class="w-20 h-1 bg-secondary/20 dark:bg-blue-500/20 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Education Timeline (Left) -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="p-3 bg-secondary/10 dark:bg-blue-500/10 rounded-xl text-secondary dark:text-blue-400">
+                                <span class="material-symbols-outlined text-2xl font-bold">school</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary dark:text-white font-bold">Formal Education</h3>
+                        </div>
+                        <div class="relative pl-8 border-l-2 border-outline/10 dark:border-white/10 space-y-8">
+                            <!-- Timeline Entry -->
+                            <div class="relative">
+                                <!-- Bullet Node -->
+                                <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-secondary dark:bg-blue-500 border-4 border-background dark:border-dark-bg shadow-[0_0_10px_rgba(55,85,195,0.4)]"></div>
+                                <div class="glass-card p-6 md:p-8 rounded-[2rem] space-y-4">
+                                    <div class="flex flex-wrap justify-between items-center gap-2">
+                                        <span class="px-3.5 py-1.5 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-full font-label-caps text-[10px] font-bold">2023 - 2027 (Expected)</span>
+                                        <span class="text-xs text-on-surface-variant dark:text-dark-text-muted font-medium flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">location_on</span> Tirunelveli, India
+                                        </span>
+                                    </div>
+                                    <h4 class="font-headline-sm text-xl md:text-2xl text-primary dark:text-white font-bold">B.E. Computer Science and Engineering</h4>
+                                    <p class="text-on-surface-variant dark:text-dark-text-muted font-semibold">Francis Xavier Engineering College</p>
+                                    <hr class="border-outline/10 dark:border-white/5">
+                                    <ul class="space-y-3.5 text-body-md text-on-surface-variant dark:text-dark-text-muted">
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-2 h-2 rounded-full bg-secondary dark:bg-blue-500 mt-2 flex-shrink-0"></span>
+                                            <span><strong>Major Focus:</strong> Artificial Intelligence, Machine Learning, Data Structures, and Core Algorithms.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-2 h-2 rounded-full bg-secondary dark:bg-blue-500 mt-2 flex-shrink-0"></span>
+                                            <span><strong>Core Competencies:</strong> Advanced Java Architecture, Computer Networks, Database Architecture, and System Engineering.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications Grid (Right) -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="p-3 bg-secondary/10 dark:bg-blue-500/10 rounded-xl text-secondary dark:text-blue-400">
+                                <span class="material-symbols-outlined text-2xl font-bold">verified</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary dark:text-white font-bold">Professional Certifications</h3>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Cert 1 -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-outline/5">
+                                <div class="w-12 h-12 flex-shrink-0 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-[24px]">database</span>
+                                </div>
+                                <div class="min-w-0">
+                                    <h5 class="font-button-text text-[13px] md:text-sm text-primary dark:text-white truncate">MongoDB Associate</h5>
+                                    <span class="text-[11px] text-on-surface-variant dark:text-dark-text-muted block truncate mt-0.5">Data Modeling & Security</span>
+                                </div>
+                            </div>
+                            <!-- Cert 2 -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-outline/5">
+                                <div class="w-12 h-12 flex-shrink-0 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-[24px]">router</span>
+                                </div>
+                                <div class="min-w-0">
+                                    <h5 class="font-button-text text-[13px] md:text-sm text-primary dark:text-white truncate">CCNA Routing & Switching</h5>
+                                    <span class="text-[11px] text-on-surface-variant dark:text-dark-text-muted block truncate mt-0.5">Cisco Academy Certified</span>
+                                </div>
+                            </div>
+                            <!-- Cert 3 -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-outline/5">
+                                <div class="w-12 h-12 flex-shrink-0 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-[24px]">lan</span>
+                                </div>
+                                <div class="min-w-0">
+                                    <h5 class="font-button-text text-[13px] md:text-sm text-primary dark:text-white truncate">Networking Essentials</h5>
+                                    <span class="text-[11px] text-on-surface-variant dark:text-dark-text-muted block truncate mt-0.5">Infrastructure Architecture</span>
+                                </div>
+                            </div>
+                            <!-- Cert 4 -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-outline/5">
+                                <div class="w-12 h-12 flex-shrink-0 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-[24px]">javascript</span>
+                                </div>
+                                <div class="min-w-0">
+                                    <h5 class="font-button-text text-[13px] md:text-sm text-primary dark:text-white truncate">Node.js Mastery</h5>
+                                    <span class="text-[11px] text-on-surface-variant dark:text-dark-text-muted block truncate mt-0.5">Backend Systems Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Services Section -->
+        <section id="services" class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-y border-outline/5 dark:border-white/5 section-reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16 text-center space-y-3">
+                    <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase tracking-[0.2em] font-bold">Expertise</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface dark:text-white font-extrabold">My Services</h2>
+                    <div class="w-16 h-1 bg-secondary/20 dark:bg-blue-500/20 mx-auto rounded-full"></div>
+                    <p class="text-on-surface-variant dark:text-dark-text-muted max-w-xl mx-auto pt-2 text-body-md">
+                        Crafting high-performance digital experiences with a focus on technical precision, backend integrity, and sleek usability.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/15 text-secondary dark:bg-blue-500/10 dark:text-blue-400 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl font-semibold">terminal</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-white font-bold">Full-Stack Development</h3>
+                        <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md leading-relaxed">
+                            Building robust, responsive web applications leveraging modern frontend frameworks and efficient, scalable node architectures.
+                        </p>
+                        <a class="mt-auto flex items-center gap-2 text-secondary dark:text-blue-400 font-semibold text-button-text group/btn" href="#projects">
+                            <span>View Projects</span>
+                            <span class="material-symbols-outlined text-base group-hover/btn:translate-x-1.5 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/15 text-secondary dark:bg-blue-500/10 dark:text-blue-400 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl font-semibold">developer_board</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-white font-bold">Java App Architecture</h3>
+                        <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md leading-relaxed">
+                            Implementing high-performance algorithms, system architectures, and enterprise Spring Boot microservices with structured data modeling.
+                        </p>
+                        <a class="mt-auto flex items-center gap-2 text-secondary dark:text-blue-400 font-semibold text-button-text group/btn" href="#skills">
+                            <span>Technical Stack</span>
+                            <span class="material-symbols-outlined text-base group-hover/btn:translate-x-1.5 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/15 text-secondary dark:bg-blue-500/10 dark:text-blue-400 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl font-semibold">palette</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-white font-bold">UI/UX Interface Design</h3>
+                        <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md leading-relaxed">
+                            Creating interactive, user-centric prototypes that balance structural hierarchy, grid alignment, accessibility standards, and clean visual graphics.
+                        </p>
+                        <a class="mt-auto flex items-center gap-2 text-secondary dark:text-blue-400 font-semibold text-button-text group/btn" href="#contact">
+                            <span>Let's Discuss</span>
+                            <span class="material-symbols-outlined text-base group-hover/btn:translate-x-1.5 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Experience Section -->
+        <section id="experience" class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-bright dark:bg-dark-bg/20 section-reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="bg-surface-container-low/40 dark:bg-dark-surface/20 border border-outline/5 dark:border-white/5 p-8 md:p-16 rounded-[2.5rem] shadow-sm">
+                    <div class="flex flex-col lg:flex-row gap-12 md:gap-16">
+                        <!-- Left Block -->
+                        <div class="lg:w-1/3 space-y-4">
+                            <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase font-bold tracking-widest">Career Journey</span>
+                            <h2 class="font-headline-md text-headline-md text-on-surface dark:text-white font-extrabold">Professional Experience</h2>
+                            <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md leading-relaxed">
+                                A timeline demonstrating professional software development internships, engineering roles, and team collaboration.
+                            </p>
+                        </div>
+                        
+                        <!-- Timeline list (Right Block) -->
+                        <div class="lg:w-2/3 relative pl-8 border-l border-outline/10 dark:border-white/10 space-y-8">
+                            <!-- Timeline node -->
+                            <div class="relative group">
+                                <!-- bullet node -->
+                                <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-secondary dark:bg-blue-500 border-4 border-background dark:border-dark-bg ring-4 ring-secondary/10 dark:ring-blue-500/10"></div>
+                                <div class="glass-card p-6 md:p-8 rounded-2xl space-y-4">
+                                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                                        <div>
+                                            <h4 class="font-headline-sm text-lg md:text-xl font-bold text-on-surface dark:text-white">Web Development Intern</h4>
+                                            <p class="text-secondary dark:text-blue-400 font-bold">Evalbench Technologies</p>
+                                        </div>
+                                        <span class="text-label-caps font-label-caps bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                            JUL 2024 - AUG 2024
+                                        </span>
+                                    </div>
+                                    <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md leading-relaxed">
+                                        Collaborated directly with product teams to build responsive frontend interfaces and design layouts. Programmed reusable utility UI components, refined visual alignment, and implemented core functionalities with modern JavaScript and styling modules.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 pt-2">
+                                        <span class="px-3.5 py-1.5 bg-surface-container dark:bg-dark-surface-low rounded-lg text-secondary dark:text-blue-400 text-[11px] font-bold uppercase tracking-wider border border-outline/5 dark:border-white/5">Frontend Architecture</span>
+                                        <span class="px-3.5 py-1.5 bg-surface-container dark:bg-dark-surface-low rounded-lg text-secondary dark:text-blue-400 text-[11px] font-bold uppercase tracking-wider border border-outline/5 dark:border-white/5">Collaborative Dev</span>
+                                        <span class="px-3.5 py-1.5 bg-surface-container dark:bg-dark-surface-low rounded-lg text-secondary dark:text-blue-400 text-[11px] font-bold uppercase tracking-wider border border-outline/5 dark:border-white/5">UI Components</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Skills Section -->
+        <section id="skills" class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-y border-outline/5 dark:border-white/5 section-reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div class="space-y-3">
+                        <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase font-bold tracking-widest">Technical Arsenal</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface dark:text-white font-extrabold">Skills & Technologies</h2>
+                        <div class="w-16 h-1 bg-secondary/20 dark:bg-blue-500/20 rounded-full"></div>
+                    </div>
+                    <p class="text-on-surface-variant dark:text-dark-text-muted max-w-sm text-body-md">
+                        Continuously expanding my engineering stack, mastering systems development, robust frameworks, and design details.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+                    
+                    <!-- Group 1: Programming -->
+                    <div class="space-y-6">
+                        <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Programming</h3>
+                        <div class="space-y-4">
+                            <!-- Skill Item -->
+                            <div class="glass-card p-5 rounded-xl flex items-center justify-between border border-outline/5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-lg bg-secondary/10 dark:bg-blue-500/10 flex items-center justify-center text-secondary dark:text-blue-400">
+                                        <span class="material-symbols-outlined text-[18px]">code</span>
+                                    </div>
+                                    <span class="font-bold text-sm text-primary dark:text-white">Java</span>
+                                </div>
+                                <span class="text-xs font-extrabold text-secondary dark:text-blue-400">85%</span>
+                            </div>
+                            <!-- Skill Item -->
+                            <div class="glass-card p-5 rounded-xl flex items-center justify-between border border-outline/5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-lg bg-secondary/10 dark:bg-blue-500/10 flex items-center justify-center text-secondary dark:text-blue-400">
+                                        <span class="material-symbols-outlined text-[18px]">terminal</span>
+                                    </div>
+                                    <span class="font-bold text-sm text-primary dark:text-white">C Language</span>
+                                </div>
+                                <span class="text-xs font-extrabold text-secondary dark:text-blue-400">70%</span>
+                            </div>
+                            <!-- Skill Item -->
+                            <div class="glass-card p-5 rounded-xl flex items-center justify-between border border-outline/5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-lg bg-secondary/10 dark:bg-blue-500/10 flex items-center justify-center text-secondary dark:text-blue-400">
+                                        <span class="material-symbols-outlined text-[18px]">javascript</span>
+                                    </div>
+                                    <span class="font-bold text-sm text-primary dark:text-white">JavaScript</span>
+                                </div>
+                                <span class="text-xs font-extrabold text-secondary dark:text-blue-400">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Group 2: Frameworks (with bars) -->
+                    <div class="space-y-6">
+                        <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Frameworks</h3>
+                        <div class="space-y-4">
+                            <!-- Skill card -->
+                            <div class="glass-card p-5 rounded-xl space-y-3 border border-outline/5">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-sm text-primary dark:text-white">React.js</span>
+                                    <span class="text-[9px] font-bold bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 px-2 py-0.5 rounded uppercase">Advanced</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-surface-container dark:bg-dark-surface rounded-full overflow-hidden">
+                                    <div class="bg-secondary dark:bg-blue-500 h-full rounded-full transition-all duration-1000" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <!-- Skill card -->
+                            <div class="glass-card p-5 rounded-xl space-y-3 border border-outline/5">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-sm text-primary dark:text-white">Spring Boot</span>
+                                    <span class="text-[9px] font-bold bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 px-2 py-0.5 rounded uppercase">Enterprise</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-surface-container dark:bg-dark-surface rounded-full overflow-hidden">
+                                    <div class="bg-secondary dark:bg-blue-500 h-full rounded-full transition-all duration-1000" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                            <!-- Skill card -->
+                            <div class="glass-card p-5 rounded-xl space-y-3 border border-outline/5">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-sm text-primary dark:text-white">Node.js</span>
+                                    <span class="text-[9px] font-bold bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 px-2 py-0.5 rounded uppercase">Mid</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-surface-container dark:bg-dark-surface rounded-full overflow-hidden">
+                                    <div class="bg-secondary dark:bg-blue-500 h-full rounded-full transition-all duration-1000" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Group 3: Databases & Tools -->
+                    <div class="space-y-6">
+                        <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Databases & Tools</h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <!-- Database Item -->
+                            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-center group border border-outline/5">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 group-hover:scale-110 transition-transform text-2xl">database</span>
+                                <span class="text-[10px] font-bold font-label-caps uppercase tracking-tight text-primary dark:text-white">MongoDB</span>
+                            </div>
+                            <!-- Database Item -->
+                            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-center group border border-outline/5">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 group-hover:scale-110 transition-transform text-2xl">storage</span>
+                                <span class="text-[10px] font-bold font-label-caps uppercase tracking-tight text-primary dark:text-white">MySQL</span>
+                            </div>
+                            <!-- Tool Item -->
+                            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-center group border border-outline/5">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 group-hover:scale-110 transition-transform text-2xl">cloud_sync</span>
+                                <span class="text-[10px] font-bold font-label-caps uppercase tracking-tight text-primary dark:text-white">GitHub</span>
+                            </div>
+                            <!-- Tool Item -->
+                            <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-center group border border-outline/5">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 group-hover:scale-110 transition-transform text-2xl">integration_instructions</span>
+                                <span class="text-[10px] font-bold font-label-caps uppercase tracking-tight text-primary dark:text-white">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Group 4: Soft Skills (Core Values) -->
+                    <div class="space-y-6">
+                        <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Core Values</h3>
+                        <div class="flex flex-col gap-2.5">
+                            <div class="px-5 py-3 bg-surface-container-high dark:bg-dark-surface/40 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-3 border border-outline/5 dark:border-white/5 hover:border-secondary/20 dark:hover:border-blue-500/20 transition-colors">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 text-lg">check_circle</span>
+                                Problem Solving
+                            </div>
+                            <div class="px-5 py-3 bg-surface-container-high dark:bg-dark-surface/40 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-3 border border-outline/5 dark:border-white/5 hover:border-secondary/20 dark:hover:border-blue-500/20 transition-colors">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 text-lg">groups</span>
+                                Teamwork
+                            </div>
+                            <div class="px-5 py-3 bg-surface-container-high dark:bg-dark-surface/40 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-3 border border-outline/5 dark:border-white/5 hover:border-secondary/20 dark:hover:border-blue-500/20 transition-colors">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 text-lg">psychology</span>
+                                Adaptability
+                            </div>
+                            <div class="px-5 py-3 bg-surface-container-high dark:bg-dark-surface/40 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-3 border border-outline/5 dark:border-white/5 hover:border-secondary/20 dark:hover:border-blue-500/20 transition-colors">
+                                <span class="material-symbols-outlined text-secondary dark:text-blue-400 text-lg">forum</span>
+                                Communication
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Projects Section -->
+        <section id="projects" class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-bright dark:bg-dark-bg/20 section-reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16 space-y-3">
+                    <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase tracking-widest font-bold">Portfolio Showcase</span>
+                    <h2 class="font-headline-md text-headline-md text-primary dark:text-white font-extrabold">Featured Projects</h2>
+                    <div class="w-16 h-1 bg-secondary/20 dark:bg-blue-500/20 rounded-full"></div>
+                </div>
+                
+                <!-- Project Container Grid / Stack -->
+                <div class="space-y-12">
+                    <!-- Project Card -->
+                    <div class="glass-card p-6 md:p-12 rounded-[2.5rem] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                        <!-- Left Mockup Visual -->
+                        <div class="lg:col-span-6">
+                            <div class="overflow-hidden rounded-2xl shadow-lg border border-outline/5 dark:border-white/5">
+                                <img src="assets/project-healthcare.png" alt="AI Healthcare Assistant Dashboard" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                        
+                        <!-- Right Detail Copy -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3.5 py-1.5 bg-secondary/10 text-secondary dark:bg-blue-500/10 dark:text-blue-400 rounded-full font-label-caps text-[10px] font-extrabold uppercase tracking-wide">Java Spring Boot</span>
+                                <span class="px-3.5 py-1.5 bg-surface-container dark:bg-dark-surface text-on-surface-variant dark:text-dark-text-muted rounded-full font-label-caps text-[10px] font-bold uppercase tracking-wide">Gemini AI</span>
+                                <span class="px-3.5 py-1.5 bg-surface-container dark:bg-dark-surface text-on-surface-variant dark:text-dark-text-muted rounded-full font-label-caps text-[10px] font-bold uppercase tracking-wide">Firebase</span>
+                            </div>
+                            <h3 class="font-headline-md text-2xl md:text-3xl font-extrabold text-primary dark:text-white">AI Healthcare Assistant</h3>
+                            <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md leading-relaxed">
+                                An intelligent medical companion designed to bridge the gap between patients and preliminary medical diagnosis. Built using Java Spring Boot and integrated with Google's Gemini AI API for sophisticated natural language symptom analysis and diagnostics mapping.
+                            </p>
+                            
+                            <!-- Key Feature Checkpoints -->
+                            <ul class="space-y-3 text-body-md text-on-surface-variant dark:text-dark-text-muted">
+                                <li class="flex items-center gap-3.5">
+                                    <span class="material-symbols-outlined text-secondary dark:text-blue-400 font-bold text-lg select-none">check_circle</span>
+                                    <span>Intelligent AI Chatbot for complex symptom queries</span>
+                                </li>
+                                <li class="flex items-center gap-3.5">
+                                    <span class="material-symbols-outlined text-secondary dark:text-blue-400 font-bold text-lg select-none">check_circle</span>
+                                    <span>Secure user data & logs storage via Firebase</span>
+                                </li>
+                                <li class="flex items-center gap-3.5">
+                                    <span class="material-symbols-outlined text-secondary dark:text-blue-400 font-bold text-lg select-none">check_circle</span>
+                                    <span>Ultra-responsive modern responsive web architecture</span>
+                                </li>
+                            </ul>
+                            
+                            <!-- CTA Links -->
+                            <div class="flex flex-wrap gap-4 pt-2">
+                                <a href="#" class="flex items-center gap-2 bg-primary dark:bg-blue-600 text-on-primary dark:text-white px-6 py-3.5 rounded-xl font-button-text hover:bg-secondary dark:hover:bg-blue-500 shadow-md active:scale-95 transition-all">
+                                    <span>View Case Study</span>
+                                    <span class="material-symbols-outlined text-sm font-bold">north_east</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-2 glass-card text-primary dark:text-white px-6 py-3.5 rounded-xl font-button-text hover:border-secondary active:scale-95 transition-all">
+                                    <span class="material-symbols-outlined text-sm">code</span>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Section -->
+        <section id="contact" class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-t border-outline/5 dark:border-white/5 section-reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16 text-center space-y-3">
+                    <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase tracking-widest font-bold">Get In Touch</span>
+                    <h2 class="font-headline-md text-headline-md text-primary dark:text-white font-extrabold">Let's Discuss Your Next Innovation</h2>
+                    <div class="w-20 h-1 bg-secondary/20 dark:bg-blue-500/20 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Left Side Info Cards -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Info Card 1 -->
+                        <div class="glass-card p-6 rounded-2xl flex items-center gap-5 border border-outline/5">
+                            <div class="w-12 h-12 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-[24px]">mail</span>
+                            </div>
+                            <div class="min-w-0">
+                                <span class="text-xs font-semibold text-on-surface-variant dark:text-dark-text-muted">Email Me</span>
+                                <a href="mailto:abdulmalik.r333@gmail.com" class="block font-bold text-[14px] md:text-[16px] text-primary dark:text-white hover:text-secondary dark:hover:text-blue-400 truncate mt-0.5">
+                                    abdulmalik.r333@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Info Card 2 -->
+                        <div class="glass-card p-6 rounded-2xl flex items-center gap-5 border border-outline/5">
+                            <div class="w-12 h-12 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-[24px]">call</span>
+                            </div>
+                            <div class="min-w-0">
+                                <span class="text-xs font-semibold text-on-surface-variant dark:text-dark-text-muted">Call Anytime</span>
+                                <a href="tel:+916385544118" class="block font-bold text-[14px] md:text-[16px] text-primary dark:text-white hover:text-secondary dark:hover:text-blue-400 truncate mt-0.5">
+                                    +91 63855 44118
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Info Card 3 -->
+                        <div class="glass-card p-6 rounded-2xl flex items-center gap-5 border border-outline/5">
+                            <div class="w-12 h-12 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-[24px]">location_on</span>
+                            </div>
+                            <div class="min-w-0">
+                                <span class="text-xs font-semibold text-on-surface-variant dark:text-dark-text-muted">Location</span>
+                                <span class="block font-bold text-[14px] md:text-[16px] text-primary dark:text-white mt-0.5">
+                                    Tirunelveli, India
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Round Buttons -->
+                        <div class="flex gap-4 pt-4 justify-start">
+                            <a href="#" class="w-11 h-11 glass-card rounded-full flex items-center justify-center text-primary dark:text-white hover:border-secondary hover:text-secondary active:scale-95">
+                                <span class="material-symbols-outlined text-[20px]">language</span>
+                            </a>
+                            <a href="#" class="w-11 h-11 glass-card rounded-full flex items-center justify-center text-primary dark:text-white hover:border-secondary hover:text-secondary active:scale-95">
+                                <span class="material-symbols-outlined text-[20px]">terminal</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side Interactive Form -->
+                    <div class="lg:col-span-7">
+                        <div class="glass-card p-8 md:p-10 rounded-[2rem] border border-outline/5 relative overflow-hidden">
+                            
+                            <!-- Form element -->
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Full Name -->
+                                    <div class="space-y-2">
+                                        <label for="form-name" class="font-label-caps text-label-caps text-on-surface-variant dark:text-dark-text-muted uppercase text-[10px] font-bold">Full Name</label>
+                                        <input type="text" id="form-name" placeholder="John Doe" class="w-full bg-white dark:bg-dark-surface-low border border-outline/10 dark:border-white/5 focus:border-secondary dark:focus:border-blue-500 focus:ring-1 focus:ring-secondary dark:focus:ring-blue-500 rounded-xl px-5 py-3.5 text-body-md text-primary dark:text-white placeholder:text-outline/40 transition-all">
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="space-y-2">
+                                        <label for="form-email" class="font-label-caps text-label-caps text-on-surface-variant dark:text-dark-text-muted uppercase text-[10px] font-bold">Email Address</label>
+                                        <input type="email" id="form-email" placeholder="john@example.com" class="w-full bg-white dark:bg-dark-surface-low border border-outline/10 dark:border-white/5 focus:border-secondary dark:focus:border-blue-500 focus:ring-1 focus:ring-secondary dark:focus:ring-blue-500 rounded-xl px-5 py-3.5 text-body-md text-primary dark:text-white placeholder:text-outline/40 transition-all">
+                                    </div>
+                                </div>
+                                
+                                <!-- Subject -->
+                                <div class="space-y-2">
+                                    <label for="form-subject" class="font-label-caps text-label-caps text-on-surface-variant dark:text-dark-text-muted uppercase text-[10px] font-bold">Subject</label>
+                                    <input type="text" id="form-subject" placeholder="Project Inquiry" class="w-full bg-white dark:bg-dark-surface-low border border-outline/10 dark:border-white/5 focus:border-secondary dark:focus:border-blue-500 focus:ring-1 focus:ring-secondary dark:focus:ring-blue-500 rounded-xl px-5 py-3.5 text-body-md text-primary dark:text-white placeholder:text-outline/40 transition-all">
+                                </div>
+                                
+                                <!-- Message -->
+                                <div class="space-y-2">
+                                    <label for="form-message" class="font-label-caps text-label-caps text-on-surface-variant dark:text-dark-text-muted uppercase text-[10px] font-bold">Message</label>
+                                    <textarea id="form-message" rows="5" placeholder="Tell me about your vision..." class="w-full bg-white dark:bg-dark-surface-low border border-outline/10 dark:border-white/5 focus:border-secondary dark:focus:border-blue-500 focus:ring-1 focus:ring-secondary dark:focus:ring-blue-500 rounded-xl px-5 py-3.5 text-body-md text-primary dark:text-white placeholder:text-outline/40 transition-all resize-none"></textarea>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <button type="submit" class="w-full md:w-auto flex items-center justify-center gap-3 bg-primary dark:bg-blue-600 text-on-primary dark:text-white px-8 py-4 rounded-xl font-button-text text-body-md hover:bg-secondary dark:hover:bg-blue-500 transition-all shadow-md active:scale-95 group">
+                                    <span>Send Message</span>
+                                    <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">send</span>
+                                </button>
+                            </form>
+                            
+                            <!-- Success Feedback Toast Container -->
+                            <div id="form-success-toast" class="hidden absolute inset-0 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-md flex flex-col items-center justify-center text-center p-8 transition-opacity duration-300">
+                                <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-950/50 text-emerald-500 rounded-full flex items-center justify-center mb-6">
+                                    <span class="material-symbols-outlined text-4xl font-extrabold">check_circle</span>
+                                </div>
+                                <h4 class="text-2xl font-extrabold text-primary dark:text-white mb-2">Message Sent Successfully!</h4>
+                                <p class="text-on-surface-variant dark:text-dark-text-muted max-w-sm mb-6">
+                                    Thank you for reaching out, Abdul Malik. I will review your message and reply as soon as possible.
+                                </p>
+                                <button onclick="resetContactForm()" class="bg-primary dark:bg-blue-600 text-on-primary dark:text-white px-6 py-2.5 rounded-xl text-xs font-bold active:scale-95 transition-all">
+                                    Send Another Message
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="w-full bg-surface-container-lowest dark:bg-dark-surface border-t border-outline/10 dark:border-white/5 py-16">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-12">
+            <!-- Top Column Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <!-- Brand Description -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="font-headline-sm text-headline-sm font-extrabold text-primary dark:text-white tracking-tighter">
+                        Abdul Malik R
+                    </div>
+                    <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md max-w-sm leading-relaxed">
+                        Building innovative solutions through technology and continuous learning. Specialized in modern backend systems and intelligent AI integrations.
+                    </p>
+                </div>
+                
+                <!-- Navigation Column -->
+                <div class="md:col-span-3 space-y-3.5">
+                    <h5 class="font-label-caps text-label-caps text-primary dark:text-white font-extrabold text-[10px] tracking-wider uppercase">Navigation</h5>
+                    <ul class="space-y-2 text-sm text-on-surface-variant dark:text-dark-text-muted font-medium">
+                        <li><a href="#home" class="hover:text-secondary dark:hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-secondary dark:hover:text-blue-400 transition-colors">Biography</a></li>
+                        <li><a href="#projects" class="hover:text-secondary dark:hover:text-blue-400 transition-colors">Projects Portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Column -->
+                <div class="md:col-span-2 space-y-3.5">
+                    <h5 class="font-label-caps text-label-caps text-primary dark:text-white font-extrabold text-[10px] tracking-wider uppercase">Legal</h5>
+                    <ul class="space-y-2 text-sm text-on-surface-variant dark:text-dark-text-muted font-medium">
+                        <li><a href="#" class="hover:text-secondary dark:hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-secondary dark:hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Column -->
+                <div class="md:col-span-2 space-y-3.5">
+                    <h5 class="font-label-caps text-label-caps text-primary dark:text-white font-extrabold text-[10px] tracking-wider uppercase">Socials</h5>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors">
+                            <span class="material-symbols-outlined text-xl">language</span>
+                        </a>
+                        <a href="#" class="text-on-surface-variant dark:text-dark-text-muted hover:text-secondary dark:hover:text-blue-400 transition-colors">
+                            <span class="material-symbols-outlined text-xl">terminal</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-outline/10 dark:border-white/5">
+            
+            <!-- Bottom Row -->
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs md:text-sm text-on-surface-variant dark:text-dark-text-muted">
+                <span>© 2024 Abdul Malik R. Built with Precision.</span>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-1.5 font-bold hover:text-secondary dark:hover:text-blue-400 transition-colors">
+                    <span>Back To Top</span>
+                    <span class="material-symbols-outlined text-sm font-bold">arrow_upward</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions Script -->
+    <script>
+        // --- 1. Typing Animation ---
+        const roles = ["Software Developer", "Full Stack Developer", "AI Enthusiast", "Computer Science Engineer"];
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+        const typingTarget = document.getElementById('typing-target');
+
+        function typeEffect() {
+            const currentRole = roles[currentRoleIndex];
+            if (isDeleting) {
+                typingTarget.textContent = currentRole.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+                typingSpeed = 40;
+            } else {
+                typingTarget.textContent = currentRole.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+                typingSpeed = 120;
+            }
+
+            if (!isDeleting && currentCharIndex === currentRole.length) {
+                isDeleting = true;
+                typingSpeed = 2200; // Pause at the end of typing
+            } else if (isDeleting && currentCharIndex === 0) {
+                isDeleting = false;
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                typingSpeed = 400; // Brief pause before typing next
+            }
+
+            setTimeout(typeEffect, typingSpeed);
+        }
+
+        // --- 2. Light / Dark Theme Management ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleIcon = document.getElementById('theme-toggle-icon');
+
+        // Apply theme on load
+        function applyInitialTheme() {
+            const storedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (storedTheme === 'dark' || (!storedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark');
+                themeToggleIcon.textContent = 'light_mode';
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeToggleIcon.textContent = 'dark_mode';
+            }
+        }
+
+        // Toggle theme handler
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                themeToggleIcon.textContent = 'dark_mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                themeToggleIcon.textContent = 'light_mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // --- 3. Scroll Reveal Animation via Intersection Observer ---
+        const revealElements = document.querySelectorAll('.section-reveal');
+        const observerOptions = {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- 4. Navigation Menu & Active Link Highlighting ---
+        const navBar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+        const menuIcon = document.getElementById('menu-icon');
+
+        // Toggle mobile nav dropdown
+        mobileMenuBtn.addEventListener('click', () => {
+            if (mobileDropdown.classList.contains('hidden')) {
+                mobileDropdown.classList.remove('hidden');
+                menuIcon.textContent = 'close';
+            } else {
+                mobileDropdown.classList.add('hidden');
+                menuIcon.textContent = 'menu';
+            }
+        });
+
+        // Close dropdown when mobile links are clicked
+        mobileDropdown.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDropdown.classList.add('hidden');
+                menuIcon.textContent = 'menu';
+            });
+        });
+
+        // Smooth scroll with custom navbar height offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    const navHeight = navBar.offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - navHeight + 8; // Tweak offset for padding
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Highlight active navbar tab based on scroll position
+        window.addEventListener('scroll', () => {
+            let currentActiveSectionId = '';
+            
+            // Adjust nav height and shadow on scroll
+            if (window.scrollY > 25) {
+                navBar.classList.add('bg-surface/95', 'dark:bg-dark-bg/95', 'shadow-md', 'py-3');
+                navBar.classList.remove('py-5');
+            } else {
+                navBar.classList.remove('bg-surface/95', 'dark:bg-dark-bg/95', 'shadow-md', 'py-3');
+                navBar.classList.add('py-5');
+            }
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const scrollPos = window.scrollY + navBar.offsetHeight + 100; // offset buffer
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    currentActiveSectionId = section.getAttribute('id');
+                }
+            });
+
+            if (currentActiveSectionId) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active-tab', 'text-secondary', 'dark:text-blue-400', 'font-semibold');
+                    link.classList.add('text-on-surface-variant', 'dark:text-dark-text-muted');
+                    
+                    if (link.getAttribute('href') === `#${currentActiveSectionId}`) {
+                        link.classList.add('active-tab', 'text-secondary', 'dark:text-blue-400', 'font-semibold');
+                        link.classList.remove('text-on-surface-variant', 'dark:text-dark-text-muted');
+                    }
+                });
+            }
+        });
+
+        // --- 5. Contact Form Submissions validation & EmailJS integration ---
+        const contactForm = document.getElementById('contact-form');
+        const successToast = document.getElementById('form-success-toast');
+
+        // Initialize EmailJS with Public Key
+        (function() {
+            emailjs.init({
+                publicKey: "XX8i_cel0brvlx3_4",
+            });
+        })();
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const nameVal = document.getElementById('form-name').value.trim();
+            const emailVal = document.getElementById('form-email').value.trim();
+            const subjectVal = document.getElementById('form-subject').value.trim();
+            const messageVal = document.getElementById('form-message').value.trim();
+            
+            // Basic validations
+            if (!nameVal || !emailVal || !subjectVal || !messageVal) {
+                alert('Please fill out all the input fields before sending your message.');
+                return;
+            }
+            
+            if (!validateEmail(emailVal)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Change button state to sending
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnHtml = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>Sending...</span><span class="material-symbols-outlined text-[16px] animate-spin">sync</span>`;
+            
+            // Send email via EmailJS
+            emailjs.send("service_rqv3ery", "template_a8b2x2t", {
+                from_name: nameVal,
+                from_email: emailVal,
+                subject: subjectVal,
+                message: messageVal
+            })
+            .then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    // Show Success Toast inside card container
+                    successToast.classList.remove('hidden');
+                    successToast.style.opacity = '1';
+                },
+                (error) => {
+                    console.error('FAILED...', error);
+                    alert('Failed to send message: ' + (error.text || JSON.stringify(error)));
+                }
+            )
+            .finally(() => {
+                // Restore button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHtml;
+            });
+        });
+
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function resetContactForm() {
+            contactForm.reset();
+            successToast.style.opacity = '0';
+            setTimeout(() => {
+                successToast.classList.add('hidden');
+            }, 300);
+        }
+
+        // Initialize elements on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            applyInitialTheme();
+            typeEffect();
+        });
+    </script>
+</body>
+</html>

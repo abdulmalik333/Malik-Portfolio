@@ -1,0 +1,16 @@
+# Local Reference/Showcase Files
+stitch_abdul_malik_portfolio_showcase/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
