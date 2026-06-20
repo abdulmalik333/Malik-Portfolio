@@ -201,6 +201,48 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Advanced Scroll Animations (Framer Motion replica) */
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.21, 0.6, 0.35, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.21, 0.6, 0.35, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.94);
+            transition: all 0.8s cubic-bezier(0.21, 0.6, 0.35, 1);
+        }
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Staggered Children entrance reveals */
+        .stagger-container.active .stagger-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.21, 0.6, 0.35, 1);
+        }
         
         /* Custom scrollbar */
         ::-webkit-scrollbar {
@@ -379,11 +421,11 @@
         </section>
 
         <!-- 2. About Me Section -->
-        <section id="about" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/30 border-y border-outline/5 dark:border-white/5 section-reveal">
+        <section id="about" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/30 border-y border-outline/5 dark:border-white/5">
             <div class="max-w-container-max mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center overflow-hidden">
                     <!-- Left Photo Graphic -->
-                    <div class="relative">
+                    <div class="relative reveal-left">
                         <div class="glass-card p-3 rounded-[2.5rem] overflow-hidden aspect-[4/5] md:aspect-square">
                             <img alt="Sleek Minimal Workspace" class="w-full h-full object-cover rounded-[2rem]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3FYkM8ZNDKYcfx1wpPo1K4Mt1rAN1QeZwnvB_QgH_IzDVrGl12sU3xsOhTc1z2wxhY7UImBHtis920a8srmCtD9GLuEA6nl_gXIws5ZTnkN6LrZBnbYC_iaZrmoi0GonIkiVOlv-ZbjjjeJcXUjOS9kQDu0mKbYyoLAmheq07nUBfJ4MI2K9L5KS9h4quhT-9aFOnoq17m55mi7PTcNfuJE3-46TEZn7AZ_6sVet0GRqrk14NXhXIfA-InTQE9ydr6iqwAsAubg"/>
                         </div>
@@ -396,7 +438,7 @@
                     </div>
                     
                     <!-- Right Bio & Stats -->
-                    <div class="space-y-8">
+                    <div class="space-y-8 reveal-right">
                         <div class="space-y-3">
                             <span class="font-label-caps text-label-caps text-secondary dark:text-blue-400 uppercase tracking-widest font-bold">Biography</span>
                             <h2 class="font-headline-md text-headline-md text-primary dark:text-white font-extrabold">About Me</h2>
@@ -534,7 +576,7 @@
         </section>
 
         <!-- 4. Services Section -->
-        <section id="services" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-y border-outline/5 dark:border-white/5 section-reveal">
+        <section id="services" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-y border-outline/5 dark:border-white/5 stagger-container">
             <div class="max-w-container-max mx-auto">
                 <div class="mb-16 text-center space-y-3">
                     <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase tracking-[0.2em] font-bold">Expertise</span>
@@ -547,7 +589,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Service 1 -->
-                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group">
+                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group stagger-item">
                         <div class="w-14 h-14 rounded-2xl bg-secondary/15 text-secondary dark:bg-blue-500/10 dark:text-blue-400 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
                             <span class="material-symbols-outlined text-3xl font-semibold">terminal</span>
                         </div>
@@ -561,7 +603,7 @@
                         </a>
                     </div>
                     <!-- Service 2 -->
-                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group">
+                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group stagger-item">
                         <div class="w-14 h-14 rounded-2xl bg-secondary/15 text-secondary dark:bg-blue-500/10 dark:text-blue-400 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
                             <span class="material-symbols-outlined text-3xl font-semibold">developer_board</span>
                         </div>
@@ -575,7 +617,7 @@
                         </a>
                     </div>
                     <!-- Service 3 -->
-                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group">
+                    <div class="glass-card p-8 md:p-10 rounded-3xl flex flex-col items-start gap-6 group stagger-item">
                         <div class="w-14 h-14 rounded-2xl bg-secondary/15 text-secondary dark:bg-blue-500/10 dark:text-blue-400 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
                             <span class="material-symbols-outlined text-3xl font-semibold">palette</span>
                         </div>
@@ -593,12 +635,12 @@
         </section>
 
         <!-- 5. Experience Section -->
-        <section id="experience" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-bright dark:bg-dark-bg/20 section-reveal">
+        <section id="experience" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-bright dark:bg-dark-bg/20">
             <div class="max-w-container-max mx-auto">
                 <div class="bg-surface-container-low/40 dark:bg-dark-surface/20 border border-outline/5 dark:border-white/5 p-6 md:p-16 rounded-[2.5rem] shadow-sm">
                     <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
                         <!-- Left Block -->
-                        <div class="lg:w-1/3 space-y-4">
+                        <div class="lg:w-1/3 space-y-4 reveal-left">
                             <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase font-bold tracking-widest">Career Journey</span>
                             <h2 class="font-headline-md text-headline-md text-on-surface dark:text-white font-extrabold">Professional Experience</h2>
                             <p class="text-on-surface-variant dark:text-dark-text-muted text-body-md max-w-xs leading-relaxed">
@@ -607,7 +649,7 @@
                         </div>
                         
                         <!-- Timeline list (Right Block) -->
-                        <div class="lg:w-2/3 relative pl-8 border-l border-outline/10 dark:border-white/10 space-y-8">
+                        <div class="lg:w-2/3 relative pl-8 border-l border-outline/10 dark:border-white/10 space-y-8 reveal-right">
                             <!-- Timeline node -->
                             <div class="relative group">
                                 <!-- bullet node -->
@@ -639,7 +681,7 @@
         </section>
 
         <!-- 6. Skills Section -->
-        <section id="skills" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-y border-outline/5 dark:border-white/5 section-reveal">
+        <section id="skills" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-y border-outline/5 dark:border-white/5 stagger-container">
             <div class="max-w-container-max mx-auto">
                 <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div class="space-y-3">
@@ -655,7 +697,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
                     
                     <!-- Group 1: Programming -->
-                    <div class="space-y-6">
+                    <div class="space-y-6 stagger-item">
                         <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Programming</h3>
                         <div class="space-y-4">
                             <!-- Skill Item -->
@@ -692,7 +734,7 @@
                     </div>
                     
                     <!-- Group 2: Frameworks (with bars) -->
-                    <div class="space-y-6">
+                    <div class="space-y-6 stagger-item">
                         <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Frameworks</h3>
                         <div class="space-y-4">
                             <!-- Skill card -->
@@ -729,7 +771,7 @@
                     </div>
                     
                     <!-- Group 3: Databases & Tools -->
-                    <div class="space-y-6">
+                    <div class="space-y-6 stagger-item">
                         <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Databases & Tools</h3>
                         <div class="grid grid-cols-2 gap-3">
                             <!-- Database Item -->
@@ -756,7 +798,7 @@
                     </div>
                     
                     <!-- Group 4: Soft Skills (Core Values) -->
-                    <div class="space-y-6">
+                    <div class="space-y-6 stagger-item">
                         <h3 class="font-label-caps text-label-caps text-outline dark:text-dark-text-muted uppercase border-b border-outline/10 dark:border-white/10 pb-3 font-bold tracking-widest">Core Values</h3>
                         <div class="flex flex-col gap-2.5">
                             <div class="px-5 py-3 bg-surface-container-high dark:bg-dark-surface/40 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-3 border border-outline/5 dark:border-white/5 hover:border-secondary/20 dark:hover:border-blue-500/20 transition-colors">
@@ -782,7 +824,7 @@
         </section>
 
         <!-- 7. Projects Section -->
-        <section id="projects" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-bright dark:bg-dark-bg/20 section-reveal">
+        <section id="projects" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-bright dark:bg-dark-bg/20">
             <div class="max-w-container-max mx-auto">
                 <div class="mb-16 space-y-3">
                     <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase tracking-widest font-bold">Portfolio Showcase</span>
@@ -793,7 +835,7 @@
                 <!-- Project Container Grid / Stack -->
                 <div class="space-y-12">
                     <!-- Project Card -->
-                    <div class="glass-card p-6 md:p-12 rounded-[2.5rem] grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+                    <div class="glass-card p-6 md:p-12 rounded-[2.5rem] grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center reveal-scale">
                         <!-- Left Mockup Visual -->
                         <div class="lg:col-span-6">
                             <div class="overflow-hidden rounded-2xl shadow-lg border border-outline/5 dark:border-white/5">
@@ -847,7 +889,7 @@
         </section>
 
         <!-- 8. Contact Section -->
-        <section id="contact" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-t border-outline/5 dark:border-white/5 section-reveal">
+        <section id="contact" class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-surface-container-low dark:bg-dark-surface/10 border-t border-outline/5 dark:border-white/5">
             <div class="max-w-container-max mx-auto">
                 <div class="mb-16 text-center space-y-3">
                     <span class="text-label-caps font-label-caps text-secondary dark:text-blue-400 uppercase tracking-widest font-bold">Get In Touch</span>
@@ -858,7 +900,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                     
                     <!-- Left Side Info Cards -->
-                    <div class="lg:col-span-5 space-y-6">
+                    <div class="lg:col-span-5 space-y-6 reveal-left">
                         <!-- Info Card 1 -->
                         <div class="glass-card p-6 rounded-2xl flex items-center gap-5 border border-outline/5">
                             <div class="w-12 h-12 bg-secondary/10 dark:bg-blue-500/10 text-secondary dark:text-blue-400 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -910,7 +952,7 @@
                     </div>
                     
                     <!-- Right Side Interactive Form -->
-                    <div class="lg:col-span-7">
+                    <div class="lg:col-span-7 reveal-right">
                         <div class="glass-card p-6 md:p-10 rounded-[2rem] border border-outline/5 relative overflow-hidden">
                             
                             <!-- Form element -->
@@ -1096,7 +1138,7 @@
         });
 
         // --- 3. Scroll Reveal Animation via Intersection Observer ---
-        const revealElements = document.querySelectorAll('.section-reveal');
+        const revealElements = document.querySelectorAll('.section-reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-container');
         const observerOptions = {
             threshold: 0.12,
             rootMargin: '0px 0px -40px 0px'
@@ -1106,6 +1148,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
+                    
+                    // Stagger child elements if container has .stagger-container
+                    if (entry.target.classList.contains('stagger-container')) {
+                        const items = entry.target.querySelectorAll('.stagger-item');
+                        items.forEach((item, index) => {
+                            item.style.transitionDelay = `${index * 100}ms`;
+                        });
+                    }
                 }
             });
         }, observerOptions);
