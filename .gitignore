@@ -14,3 +14,7 @@ desktop.ini
 *.njsproj
 *.sln
 *.sw?
+
+# Security Configurations
+config.js
+
